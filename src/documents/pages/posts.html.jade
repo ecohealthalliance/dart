@@ -1,0 +1,12 @@
+---
+title: Blog
+layout: page
+pageOrder: 4
+---
+
+nav.linklist
+  each doc in getCollection('posts').toJSON()
+    li
+      span= doc.date.toDateString()
+      |  &raquo;&nbsp;
+      a(href=doc.url)= doc.title

@@ -1,0 +1,11 @@
+---
+title: People
+layout: list
+pageOrder: 3
+---
+
+nav.linklist
+  each doc in getCollection('people').toJSON()
+    ul
+      |  &raquo;&nbsp;
+      a(href=doc.url)= doc.title
